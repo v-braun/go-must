@@ -8,9 +8,6 @@ By [v-braun - viktor-braun.de](https://viktor-braun.de).
 [![codecov](https://codecov.io/gh/v-braun/go-must/branch/master/graph/badge.svg)](https://codecov.io/gh/v-braun/go-must)
 ![PR welcome](https://img.shields.io/badge/PR-welcome-green.svg?style=flat-square)
 
-<p align="center">
-<img width="70%" src="https://via.placeholder.com/800x480.png?text=this%20is%20a%20placeholder%20for%20the%20project%20banner" />
-</p>
 
 
 
@@ -25,10 +22,11 @@ go get github.com/v-braun/go-must
 
 ``` go
 
+// if val == nil will panic with "argument val is nil"
+must.ArgNotNil(val, "val") 
 
-must.ArgNotNil(val, "val") // if val == nil will panic with "argument val is nil"
-
-must.ArgBeValid(val > 1, "val invalid: (%d > 1) == false", val) // if val <= 1 will panic with val invalid: (0 > 1) == false
+// if val <= 1 will panic with val invalid: (0 > 1) == false
+must.ArgBeValid(val > 1, "val invalid: (%d > 1) == false", val)
 
 ```
 
