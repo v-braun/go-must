@@ -13,8 +13,6 @@ By [v-braun - viktor-braun.de](https://viktor-braun.de).
 </p>
 
 
-## Description
-
 
 ## Installation
 ```sh
@@ -25,15 +23,15 @@ go get github.com/v-braun/go-must
 
 ## Usage
 
-```
-use go-must
+``` go
+
+
+must.ArgNotNil(val, "val") // if val == nil will panic with "argument val is nil"
+
+must.ArgBeValid(val > 1, "val invalid: (%d > 1) == false", val) // if val <= 1 will panic with val invalid: (0 > 1) == false
+
 ```
 
-## Configuration
-
-```
-configure go-must
-```
 
 
 
