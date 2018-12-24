@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve must
+about: Create a report to help us improve go-must
 
 ---
 
@@ -10,4 +10,4 @@ about: Create a report to help us improve must
 
 **Environment:**
  - OS: [e.g. MacOS, Windows]
- - Version of must: [e.g. 2.0]
+ - Version of go-must: [e.g. 2.0]

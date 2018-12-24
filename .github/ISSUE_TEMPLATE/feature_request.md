@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for must
+about: Suggest an idea for go-must
 
 ---
 
