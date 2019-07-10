@@ -26,6 +26,6 @@ func ArgBeValid(valid bool, message string, a ...interface{}) {
 // NoError panics when error is not nil
 func NoError(err error, message string, a ...interface{}) {
 	if err != nil {
-		panic(errors.New(fmt.Sprintf(message, a...)))
+		panic(errors.Wrap(err, fmt.Sprintf(message, a...)))
 	}
 }
