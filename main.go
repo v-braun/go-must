@@ -22,3 +22,10 @@ func ArgBeValid(valid bool, message string, a ...interface{}) {
 		panic(errors.New(fmt.Sprintf(message, a...)))
 	}
 }
+
+// NoError panics when error is not nil
+func NoError(err error, message string, a ...interface{}) {
+	if err != nil {
+		panic(errors.New(fmt.Sprintf(message, a...)))
+	}
+}
