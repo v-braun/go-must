@@ -29,3 +29,15 @@ func NoError(err error, message string, a ...interface{}) {
 		panic(errors.Wrap(err, fmt.Sprintf(message, a...)))
 	}
 }
+
+func BeTrue(expr bool, message string, a ...interface{}) {
+	if !expr {
+		panic(errors.New(fmt.Sprintf(message, a...)))
+	}
+}
+
+func BeFalse(expr bool, message string, a ...interface{}) {
+	if expr {
+		panic(errors.New(fmt.Sprintf(message, a...)))
+	}
+}

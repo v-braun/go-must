@@ -74,3 +74,23 @@ func TestArgBeValidWithoutArgs(t *testing.T) {
 	msg := fmt.Sprint(err)
 	assert.Equal(t, "val invalid", msg)
 }
+
+func TestMustBeTrue(t *testing.T) {
+	assert.Panics(t, func() {
+		BeTrue(1 == 2, "val should be two")
+	})
+
+	assert.NotPanics(t, func() {
+		BeTrue(1 == 1, "val should be one")
+	})
+}
+
+func TestMustBeFalse(t *testing.T) {
+	assert.Panics(t, func() {
+		BeFalse(1 == 1, "val should not be one")
+	})
+
+	assert.NotPanics(t, func() {
+		BeFalse(1 == 2, "val should not be 2")
+	})
+}
